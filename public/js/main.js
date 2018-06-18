@@ -1,13 +1,13 @@
-$(function() {
-    // Since there's no list-group/tab integration in Bootstrap
-    $('.list-group-item').on('click',function(e){
-     	  var previous = $(this).closest(".list-group").children(".active");
-     	  previous.removeClass('active'); // previous list-item
-     	  $(e.target).addClass('active'); // activated list-item
-   	});
+$(document).ready(function() {
+    $('.collapse').on('show.bs.collapse', function() {
+        var id = $(this).attr('id');
+        $('a[href="#' + id + '"]').closest('.panel-heading').addClass('active-faq');
+        $('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-minus"></i>');
+    });
+    $('.collapse').on('hide.bs.collapse', function() {
+        var id = $(this).attr('id');
+        $('a[href="#' + id + '"]').closest('.panel-heading').removeClass('active-faq');
+        $('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-plus"></i>');
+    });
 });
 
-$('#list-tab a').on('click', function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  })

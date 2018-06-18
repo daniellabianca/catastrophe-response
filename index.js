@@ -31,6 +31,14 @@ app.get(
     res.render("cat", { type: req.params.type });
   })
 );
+app.get(
+    "/test",
+    ("/",
+    (req, res) => {
+      var type = req.params.type;
+      res.render("test", { type: req.params.type });
+    })
+  );
 
 app.get(
   "/order/:amount/:size",

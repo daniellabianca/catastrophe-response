@@ -1,19 +1,7 @@
-
-<header>
-    <%- include('partials/header') %>
-</header>
-   
-
- <div class="container-fluid welcome">  
-<h3>Welcome to the Castastrophe Response Center!</h3>
-<h4>We noticed your area was hit by a recent catastophe and your property may have been affected. </h4>
-<h5>In order to help you with any questions or concerns you may have, we have deployed Fred, the Castastrophe Response Agent, to assist you. Please enter a question below or choose one from the dropdown of common questions. 
-</div>
-
-<div class="container d-flex flex-column flex-lg-wrap">
+<div class="container">
     <div class="row">
-        <div class="col-12">
-            <!-- Nav tabs category - code assistance from https://bootsnipp.com/snippets/VEomV -->
+        <div class="col-md-10 col-md-offset-3">
+            <!-- Nav tabs category -->
              <ul class="nav nav-tabs faq-cat-tabs">
                         <li class="active">
                         <a href="#faq-cat-1" data-toggle="tab">
@@ -304,72 +292,7 @@
 
                             <div class="row form-group">
                             <div class="col-sm-6">talk to chatbot Fred
-                            <div id="message_window">
-    <!-- this bar will appear if the websocket connection is not established -->
-    <div class="disconnected">
-        Disconnected... reconnecting!
-    </div>
-
-    <!-- this bar will appear if the websocket connection has failed to reconnect after a disconnect -->
-    <div class="offline">
-        Offline! Reload to reconnect.
-    </div>
-
-    <!-- this section contains the scrolling list of messages -->
-    <section>
-        <div id="message_list">
-
-            <!--
-              this div is used to format both incoming and outgoing messages.
-              they are styled differently based a css class tied to the message.type field
-            -->
-            <div id="message_template">
-                <div class="message <% message.type %>">
-                    <% if message.isTyping %>
-                        <div class="typing-indicator">
-                            ...
-                        </div>
-                    <% if %>
-
-                    <% message.html %>
-
-                    <!-- If the open_link field is present in the message, insert a button -->
-                    <% if message.open_link %>
-                      <a href="<% message.open_link %>" target="_blank" class="button_message"> <% if message.link_title { message.link_title } %> <% else %> <% { message.open_link } %>
-                      <%  if  %> </a>
-                      <%  if  %>
-
-                    // <!-- if the files field is present in the message, render links to attached files -->
-                    <% message.files %>
-                      <% if  image %>
-                        <img src="<% url %>" alt="<% url %>" />                        } 
-                        <% else  %>
-                    <a href="<% url %>"> "<%= url %>" </a>
-                     <%  if 
-                    message.files %>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    // <!-- this element contains any quick replies -->
-    <div id="message_replies">
-    </div>
-
-    <!-- the footer is contains the message composer, and is docked to the footer of the chat -->
-    <footer>
-        <form onsubmit="Botkit.send(Botkit.input.value, event)">
-            <input type="text" autocomplete="off" id="messenger_input" placeholder="Type here..." />
-            <button type="submit">Send</button>
-        </form>
-    </footer>
-</div>
-                            <div id="embedded_messenger">
-    <header id="message_header" onclick="Botkit.toggle()">Chat</header>
-    <iframe  id="botkit_client" src="//localhost/chat.html"></iframe>
-</div>
-
-    
+                            
                             </div>
                             </div>
 
@@ -386,9 +309,3 @@
         </div>
     </div>
 </div>
-
- <!-- Resource jQuery -->
-
-<footer>
-    <%- include('partials/footer') %>
-</footer>
