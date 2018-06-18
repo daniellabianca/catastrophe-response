@@ -11,31 +11,30 @@
 </div>
 <div class="container-fluid">
 <div class="container-fluid2">
-   <div class="list-group nav nav-tabs">
+   <div class="nav nav-tabs" id="nav-tab" role="tablist">
 
-    <ul class="list-group" role="tablist">
-     
-        <a href="#collapseOne" class="list-group-item active" role="tab" data-toggle="tab">Claims</a>
+       
+        <a href="#headingOne" class="nav-item nav-link active" id="headingOne-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="headingOne" aria-selected="true">Claims</a>
 
-        <a href="#tab2" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-account"></i> Local Resources</a>
+        <a href="#headingTwo" class="nav-item nav-link" id="headingTwo-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="headingTwo" aria-selected="false"><i class="mdi mdi-account"></i> Local Resources</a>
 
-        <a href="#tab3" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-account-settings"></i> Who to Contact</a>
+        <a href="#tab3" class="nav-item nav-link" id="headingThree-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="headingThree" aria-selected="false"><i class="mdi mdi-account-settings"></i> Who to Contact</a>
 
-        <a href="#tab4" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-star"></i> Coverage Details</a>
+        <a href="#tab4" class="nav-item nav-link" role="tab" data-toggle="tab"><i class="mdi mdi-star"></i> Coverage Details</a>
 
-        <a href="#tab5" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-cart"></i> Talk to Fred</a>        
+        <a href="#tab5" class="nav-item nav-link" role="tab" data-toggle="tab"><i class="mdi mdi-cart"></i> Talk to Fred</a>        
         </ul>
 
       </div>
   </div>
 
 <div class="divider"></div>
-  <div class="accordion container-fluid2 tab-content" id="accordionExample">
+  <div class="accordion container-fluid2 tab-content" id="nav-tabContent">
       
-      <div class="card tab-pane">
-    <div class="card-header panel-group" id="headingOne">
+  
+    <div class="tab-pane fade show active" id="headingOne" role="tabpanel" aria-labelledby="headingOne-tab">
       <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse">
           Collapsible Group Item #1
         </button>
       </h5>
@@ -48,10 +47,10 @@
     </div>
   </div>
 
-  <div class="card tab-pane">
-    <div class="card-header" id="headingTwo">
+  
+    <div class="tab-pane fade" id="headingTwo">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse">
           Collapsible Group Item #2
         </button>
       </h5>
@@ -62,8 +61,8 @@
     </div>
   </div>
 
-  <div class="card tab-pane">
-    <div class="card-header" id="headingThree">
+  
+    <div class="card-header  tab-pane fade" id="headingThree">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Collapsible Group Item #3
@@ -78,70 +77,69 @@
     </div>
   </div>
 
-</div>
+
        
 </div></div>
 <br><br>
 <div class="container-fluid2">
 <div class="row">
-  <div class="col-4">
-    <div class="list-group" id="list-tab" role="tablist">
+  <div class="col-md-6">
+    <ul class="nav nav-tabs faq-cat-tabs">
 
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="claims">Claims</a>
+      <li class="active"><a href="#faq-cat-1" data-toggle="tab">Claims</a></li>
 
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="local-resources"> Local Resources</a>
+     <li><a href="#faq-cat-2" data-toggle="tab"> Local Resources</a></li>
 
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="who-to-contact">Who to Contact</a>
+     <li><a href="#faq-cat-3" data-toggle="tab">Who to Contact</a></li>
 
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="coverage-details">Coverage Details</a>
+      <li><a href="#faq-cat-4" data-toggle="tab">Coverage Details</a></li>
 
-  <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="talk-to-fred">Talk to Fred</a>   
-    </div>
-  </div>
+  <li><a href="#faq-cat-5" data-toggle="tab">Talk to Fred</a></li> 
+  </ul>
 
-  <div class="col-8">
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="list-claims" role="tabpanel" aria-labelledby="list-home-list">.dfdsfs..
-      
-       <div class="accordion card tab-pane">
-    <div class=" card-header panel-group" id="headingOne">
+    
+    <div class="tab-content faq-cat-content">
+       <div class="tab-pane active in fade" id="faq-cat-1">
+       <div class="panel-group" id="accordion-cat-1">
+    <div class="panel panel-default panel-faq">
+
+    <div class="panel-heading">
       <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" data-parent="accordion-cat-1" href="#faq-cat-1-sub-1" aria-controls="collapseOne">
           Collapsible Group Item #1
         </button>
       </h5>
     </div>
-
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="faq-cat-1-sub-1" class="panel-collapse collapse">
+    <div class="panel-body">
+   <div class="row form-group">
+    <div class="col-sm-2">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
       </div>
     </div>
   </div>
 
-  <div class="card tab-pane">
-    <div class="card-header" id="headingTwo">
+
+ <div class="panel panel-default panel-faq">
+    <div class="panel-heading">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="btn btn-link collapsed" type="button" aria-expanded="false" data-toggle="collapse" data-target="#collapseTwo" data-parent="accordion-cat-1" href="#faq-cat-1-sub-2" aria-controls="collapseOne">
           Collapsible Group Item #2
         </button>
       </h5>
     </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
+   <div id="faq-cat-1-sub-2" class="panel-collapse collapse">
+    <div class="panel-body">
+   <div class="row form-group">
+    <div class="col-sm-2">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
     </div>
   </div>
-      
-      
-      
+            
       </div>
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">..sfdfsdf.</div>
-      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">.sfdsfs..</div>
-      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">..wdadadadadd.</div>
-    </div>
-  </div>
-</div></div>
+
+      
+     
 
 <br><br><br>
 <section class="cd-faq">
